@@ -4,6 +4,7 @@
 
 class Square:
     """New Class"""
+
     def __init__(self, size=0):
         """def"""
         if type(size) != int:
