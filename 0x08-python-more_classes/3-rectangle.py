@@ -1,5 +1,9 @@
 #!/usr/bin/python3
+"""module create Rectangle class"""
+
+
 class Rectangle:
+    """New Class"""
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
@@ -10,6 +14,7 @@ class Rectangle:
 
     @width.setter
     def width(self, value):
+        """set width of the Rectangle"""
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
@@ -23,6 +28,7 @@ class Rectangle:
 
     @height.setter
     def height(self, value):
+        """set height of the Rectangle"""
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
