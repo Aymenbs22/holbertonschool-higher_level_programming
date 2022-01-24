@@ -62,7 +62,7 @@ class Rectangle:
                     rect += "#"
                 if i < self.__height - 1:
                     rect += "\n"
-                return (rect)
+            return (rect)
 
     def __repr__(self):
 
