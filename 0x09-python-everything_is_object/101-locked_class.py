@@ -1,6 +1,9 @@
 #!/usr/bin/python3
+"""New Locker class"""
+
+
 class LockedClass:
-    """New Locker class"""
+    """Locker class"""
 
 
     __slots__ = ['first_name']
