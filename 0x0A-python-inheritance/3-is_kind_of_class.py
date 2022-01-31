@@ -3,6 +3,7 @@
 
 
 def is_kind_of_class(obj, a_class):
+    """function that returns True if the object is an instance"""
     if type(obj) is a_class:
         return (True)
     else:
