@@ -17,27 +17,27 @@ class Rectangle (Base):
 
     @property
     def width(self):
-        """intialize instance attributes"""
+        """width getter"""
         return self.__width
 
     @property
     def height(self):
-        """intialize instance attributes"""
+        """height getter"""
         return self.__height
 
     @property
     def x(self):
-        """intialize instance attributes"""
+        """x getter"""
         return self.__x
 
     @property
     def y(self):
-        """intialize instance attributes"""
+        """y getter"""
         return self.__y
 
     @width.setter
     def width(self, res):
-        """intialize instance attributes"""
+        """width setter"""
         if type(res) is not int:
             raise TypeError("width must be an integer")
         elif res <= 0:
@@ -47,7 +47,7 @@ class Rectangle (Base):
 
     @height.setter
     def height(self, res):
-        """intialize instance attributes"""
+        """height setter"""
         if type(res) is not int:
             raise TypeError("height must be an integer")
         elif res <= 0:
@@ -57,7 +57,7 @@ class Rectangle (Base):
 
     @x.setter
     def x(self, res):
-        """intialize instance attributes"""
+        """x setter"""
         if type(res) is not int:
             raise TypeError("x must be an integer")
         elif res < 0:
@@ -67,7 +67,7 @@ class Rectangle (Base):
 
     @y.setter
     def y(self, res):
-        """intialize instance attributes"""
+        """y setter"""
         if type(res) is not int:
             raise TypeError("y must be an integer")
         elif res < 0:
@@ -76,11 +76,11 @@ class Rectangle (Base):
             self.__y = res
 
     def area(self):
-        """intialize instance attributes"""
+        """returns the area value of the Rectangle instance"""
         return self.__width * self.__height
 
     def display(self):
-        """intialize instance attributes"""
+        """that prints in stdout the Rectangle"""
         for k in range(self.__y):
             print()
         for s in range(self.__height):
@@ -91,12 +91,12 @@ class Rectangle (Base):
             print()
 
     def __str__(self):
-        """intialize instance attributes"""
+        """method so that it returns [Rectangle] (<id>) <x>/<y> - <width>/<height>"""
         return ("[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}".format(
             self.id, self.__x, self.__y, self.__width, self.__height))
 
     def update(self, *args, **kwargs):
-        """intialize instance attributes"""
+        """assigns an argument to each attribute"""
         if len(args) > 0:
             for i in range(len(args)):
                 if i == 0:
@@ -125,6 +125,6 @@ class Rectangle (Base):
                         self.__y = kwargs['y']
 
     def to_dictionary(self):
-        """intialize instance attributes"""
+        """returns the dictionary representation of a Rectangle"""
         return {"id": self.id, "width": self.width, "height":
                 self.height, "x": self.x, "y": self.y}
