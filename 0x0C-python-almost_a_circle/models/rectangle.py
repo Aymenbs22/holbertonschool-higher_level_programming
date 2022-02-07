@@ -17,23 +17,27 @@ class Rectangle (Base):
 
     @property
     def width(self):
+        """intialize instance attributes"""
         return self.__width
 
     @property
     def height(self):
+        """intialize instance attributes"""
         return self.__height
 
     @property
     def x(self):
+        """intialize instance attributes"""
         return self.__x
 
     @property
     def y(self):
+        """intialize instance attributes"""
         return self.__y
 
     @width.setter
     def width(self, res):
-
+        """intialize instance attributes"""
         if type(res) is not int:
             raise TypeError("width must be an integer")
         elif res <= 0:
@@ -43,6 +47,7 @@ class Rectangle (Base):
 
     @height.setter
     def height(self, res):
+        """intialize instance attributes"""
         if type(res) is not int:
             raise TypeError("height must be an integer")
         elif res <= 0:
@@ -52,6 +57,7 @@ class Rectangle (Base):
 
     @x.setter
     def x(self, res):
+        """intialize instance attributes"""
         if type(res) is not int:
             raise TypeError("x must be an integer")
         elif res < 0:
@@ -61,6 +67,7 @@ class Rectangle (Base):
 
     @y.setter
     def y(self, res):
+        """intialize instance attributes"""
         if type(res) is not int:
             raise TypeError("y must be an integer")
         elif res < 0:
@@ -69,9 +76,11 @@ class Rectangle (Base):
             self.__y = res
 
     def area(self):
+        """intialize instance attributes"""
         return self.__width * self.__height
 
     def display(self):
+        """intialize instance attributes"""
         for k in range(self.__y):
             print()
         for s in range(self.__height):
@@ -82,10 +91,12 @@ class Rectangle (Base):
             print()
 
     def __str__(self):
+        """intialize instance attributes"""
         return ("[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}".format(
             self.id, self.__x, self.__y, self.__width, self.__height))
 
     def update(self, *args, **kwargs):
+        """intialize instance attributes"""
         if len(args) > 0:
             for i in range(len(args)):
                 if i == 0:
@@ -114,5 +125,6 @@ class Rectangle (Base):
                         self.__y = kwargs['y']
 
     def to_dictionary(self):
+        """intialize instance attributes"""
         return {"id": self.id, "width": self.width, "height":
                 self.height, "x": self.x, "y": self.y}
