@@ -24,8 +24,7 @@ class Square(Rectangle):
 
     def __str__(self):
         """method so that it returns [square] (<id>) <x>/<y>"""
-        return "[Square] ({:d}) {:d}/{:d} - {:d}".format(
-                self.id, self.x, self.y, self.size)
+        return "[Square] ({:d}) {:d}/{:d} - {:d}".format(self.id, self.x, self.y, self.size)
 
     def update(self, *args, **kwargs):
         """assigns an argument to each attribute"""
@@ -37,7 +36,7 @@ class Square(Rectangle):
                     self.size = args[i]
                 elif i == 2:
                     self.x = args[i]
-                elif i == 3:
+                else:
                     self.y = args[i]
         else:
             if len(kwargs) > 0:
@@ -52,6 +51,5 @@ class Square(Rectangle):
                     elif i == 'y':
                         self.y = kwargs['y']
 
-        def to_dictionary(self):
-            """returns the dictionary representation of a square"""
-            return {"id": self.id, "size": self.size, "x": self.x, "y": self.y}
+    def to_dictionary(self):
+        return {"id": self.id, "size": self.width, "x": self.x, "y": self.y}
