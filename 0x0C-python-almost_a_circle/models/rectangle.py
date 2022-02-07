@@ -7,8 +7,6 @@ from models.base import Base
 
 class Rectangle (Base):
     """Rectangle Class"""
-
-
     def __init__(self, width, height, x=0, y=0, id=None):
         """intialize instance attributes"""
         super().__init__(id)
@@ -114,5 +112,7 @@ class Rectangle (Base):
                         self.__x = kwargs['x']
                     elif i == 'y':
                         self.__y = kwargs['y']
+
     def to_dictionary(self):
-        return {"id": self.id, "width": self.width, "height": self.height, "x": self.x, "y": self.y}
+        return {"id": self.id, "width": self.width, "height":
+                self.height, "x": self.x, "y": self.y}
