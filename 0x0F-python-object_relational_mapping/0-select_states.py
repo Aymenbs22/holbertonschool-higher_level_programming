@@ -20,3 +20,4 @@ for row in query_rows:
     print(row)
 cur.close()
 conn.close()
+
