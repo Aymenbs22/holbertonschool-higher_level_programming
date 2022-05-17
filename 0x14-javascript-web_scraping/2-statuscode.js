@@ -1,14 +1,10 @@
 #!/usr/bin/node
 const axios = require('axios');
+axios.get(process.argv[2])
 
-async function makeRequest () {
-  const config = {
-    method: 'head',
-    url: process.argv[2]
-  };
-
-  const res = await axios(config);
-
-  console.log('code: ', res.status);
-}
-makeRequest();
+  .then(function (response) {
+    console.log('code: ' + response.status);
+  })
+  .catch(function (error) {
+    console.log('code: ' + error.response.status);
+  });
